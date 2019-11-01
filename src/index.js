@@ -51,7 +51,7 @@ var webfont = function(options, done) {
 
 	if (options.dest === undefined) return done(new Error('"options.dest" is undefined.'))
 	if (options.files === undefined) return done(new Error('"options.files" is undefined.'))
-	if (!options.files.length) return done(new Error('"options.files" is empty.'))
+	if (!options.files.length) return done()
 
 	// We modify codepoints later, so we can't use same object from default options.
 	if (options.codepoints === undefined) options.codepoints = {}
